@@ -64,9 +64,9 @@ func convert(in string) bool {
 	name:=in[:rindex]
 	e:=in[rindex+1:]
 	ext:=""
-	if e=="qmcflac"{
+	if e=="qmcflac" || e=="mflac"{
 		ext="flac"
-	} else if (e=="qmc0" || e=="qmc3"){
+	} else if e=="qmc0" || e=="qmc3"{
 		ext="mp3"
 	}
 	fin,err:=os.Open(in)
